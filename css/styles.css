@@ -458,7 +458,6 @@ ul {
 .icon-clients {
   fill: currentColor;
 }
-
 /* footer list */
 .footerlist-address {
   display: block;
@@ -588,6 +587,7 @@ ul {
   height: 50px;
   margin-left: 10px;
   padding: 10px 29px;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
 
@@ -608,9 +608,8 @@ ul {
   color: var(--white-text-color);
   background-color: var(--accent-color);
 }
-.button-sub:hover {
-  background: #188ce8;
-}
+/* .button-sub:hover { */
+/* background: #188ce8; */
 
 .input-subscribe {
   display: flex;
@@ -687,22 +686,12 @@ ul {
   outline: transparent;
   transition: border-color 250ms var(--function-time);
 }
-.modal-button-close:focus {
-  background-color: var(--accent-color);
-}
-.modal-button-close:focus + .modal-icon {
+.modal-button-close:focus svg,
+.modal-button-close:hover svg {
   fill: var(--accent-color);
 }
-/* .modal-icon:focus { */
-/* background-color: var(--accent-color); */
-
-/* .modal-button-close:focus + .modal-icon:focus { */
+/* .modal-button-close:focus + .modal-icon { */
 /* fill: var(--accent-color); */
-/* .modal-icon:focus { */
-/* background-color: #2196F3; */
-
-/* .modal-icon { */
-/* fill:var(--accent-color); */
 
 .modal-input:focus {
   border-color: var(--accent-color);
@@ -720,7 +709,6 @@ ul {
   transform: translateY(-50%);
   transition: color var(--function-time);
 }
-
 .modal-input::placeholder {
   font-weight: 400;
   font-size: 12px;
@@ -782,21 +770,24 @@ ul {
 .text-check a {
   color: var(--accent-color);
 }
-.text-check a {
-  text-decoration: underline;
-}
 .text-check span {
   width: 16px;
   height: 15px;
-  border: 0.2px solid var(--background-icon);
   margin-right: 7px;
   align-items: center;
   justify-content: center;
 }
-.check-icon {
-  fill: transparent;
+check-icon .check-icon {
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
 }
-
+.input-check:focus + .text-check .check-icon {
+  border-color: var(--accent-color);
+}
+.input-check:checked + .text-check .check-icon {
+  fill: var(--white-text-color);
+  border-color: var(--accent-color);
+}
 .input-check:checked + .text-check span {
   background-color: var(--accent-color);
   border: none;
@@ -805,12 +796,12 @@ ul {
 .input-check:checked + .text-check .check-icon {
   fill: var(--white-text-color);
 }
-.input-check:focus + .text-check span {
-  border-color: var(--accent-color);
-}
 .check-icon {
   border: 1px solid var(--primary-text-color);
   border-radius: 2px;
+}
+.check-icon {
+  fill: transparent;
 }
 /* ===============================Портфолио============================== */
 
@@ -892,7 +883,6 @@ ul {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-
 /* -------------------------container================= */
 .portfolio-flex {
   display: flex;
